@@ -45,9 +45,11 @@ body {
 
 .gallery__image:hover {
   transform: scale(1.03);
+  filter: grayscale(0);
 }
 
 .gallery__image {
+  filter: grayscale(1);
   height: 100%;
   width: 100%;
   object-fit: cover;
