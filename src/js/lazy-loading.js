@@ -1,4 +1,6 @@
 // 7. Ленивая загрузка изображений
+
+
 export const addSrcAttrToLazyImages = () => {
   const lazyImages = document.querySelectorAll('.gallery__image');
   lazyImages.forEach(image => {

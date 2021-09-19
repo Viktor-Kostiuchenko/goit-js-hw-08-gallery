@@ -2,15 +2,14 @@ import galleryItems from './data/gallery-items.js';
 import refs from './refs.js'
 import {onSetAttributes} from './set-attributes.js'
 
-// 3.Открытие модального окна по клику на элементе галереи.
+// Открытие модального окна по клику на элементе галереи.
 export const onOpenModalWindow = () => {
   refs.lightboxEl.classList.add('is-open')
   window.addEventListener('keydown', onModalWindowKeyDown)
 }
 
-// 5.Закрытие модального окна по клику на кнопку button[data-action="close-lightbox"]
-// и 6.Очистка значения атрибута src элемента img.lightbox__image. 
-// refs.lightboxBtnEl.addEventListener('click', onCloseModalWindow)
+// Закрытие модального окна по клику на кнопку button[data-action="close-lightbox"]
+// Очистка значения атрибута src элемента img.lightbox__image. 
 export const onCloseModalWindow = () => {
   refs.lightboxEl.classList.remove('is-open')
   onSetAttributes('', '')
@@ -18,7 +17,6 @@ export const onCloseModalWindow = () => {
 }
 
 // закрытие модального окна при клике в бекдроп
-// refs.lightboxOverlayEl.addEventListener('click', onBackdropClick)
 export const onBackdropClick = (event) => {
   if (event.currentTarget === event.target) {
     onCloseModalWindow()
